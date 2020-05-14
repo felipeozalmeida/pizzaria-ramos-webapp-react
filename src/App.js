@@ -1,9 +1,11 @@
 import React from 'react';
+import './App.scss';
+import BaseHeader from './components/BaseHeader';
 
 function App() {
   return (
     <div className="App">
-      <h1>Pizzaria Ramos Webapp (React Version)</h1>
+      <BaseHeader />
     </div>
   );
 }
