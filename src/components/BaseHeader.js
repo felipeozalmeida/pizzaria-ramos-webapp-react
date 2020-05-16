@@ -5,14 +5,12 @@ import './BaseHeader.scss';
 
 function BaseHeader() {
   return (
-    <header>
-      <Jumbotron fluid>
-        <Container>
-          <h1 className="display-3">Pizzaria Ramos</h1>
-          <p className="lead">Atendendo a seus pedidos, sempre!</p>
-        </Container>
-      </Jumbotron>
-    </header>
+    <Jumbotron fluid className="BaseHeader" as="header">
+      <Container>
+        <h1 className="display-3">Pizzaria Ramos</h1>
+        <p className="lead">Atendendo a seus pedidos, sempre!</p>
+      </Container>
+    </Jumbotron>
   )
 }
 
