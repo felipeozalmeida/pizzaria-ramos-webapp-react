@@ -5,10 +5,10 @@ import './styles.scss';
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       <AppHeader />
       <AppMain />
-    </React.Fragment>
+    </>
   );
 }
 
