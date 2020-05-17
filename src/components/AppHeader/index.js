@@ -1,11 +1,11 @@
 import React from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
-import './BaseHeader.scss';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import './styles.scss';
 
-function BaseHeader() {
+function AppHeader() {
   return (
-    <Jumbotron fluid className="BaseHeader" as="header">
+    <Jumbotron fluid className="AppHeader" as="header">
       <Container>
         <h1 className="display-3">Pizzaria Ramos</h1>
         <p className="lead">Atendendo a seus pedidos, sempre!</p>
@@ -14,4 +14,4 @@ function BaseHeader() {
   )
 }
 
-export default BaseHeader;
+export default AppHeader;
