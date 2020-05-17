@@ -1,5 +1,5 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container'
+import React from "react";
+import Container from "react-bootstrap/Container";
 
 function AppMain() {
   return (
@@ -8,7 +8,7 @@ function AppMain() {
         <h2 className="sr-only">Pizzas</h2>
       </Container>
     </main>
-  )
+  );
 }
 
-export default AppMain
+export default AppMain;
