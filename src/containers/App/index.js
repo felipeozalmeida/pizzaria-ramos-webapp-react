@@ -1,6 +1,6 @@
 import React from "react";
-import AppHeader from "../../components/AppHeader";
-import AppMain from "../../components/AppMain";
+import AppHeader from "../../layouts/AppHeader";
+import AppMain from "../../layouts/AppMain";
 import "./styles.scss";
 
 function App() {
