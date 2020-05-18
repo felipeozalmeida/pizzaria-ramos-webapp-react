@@ -1,0 +1,15 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+.PizzaItemToolbar {
+  position: absolute;
+  bottom: $card-spacer-x;
+  right: $card-spacer-x;
+  margin-left: -0.125rem;
+  margin-right: -0.125rem;
+
+  &__button {
+    margin-left: 0.125rem;
+    margin-right: 0.125rem;
+  }
+}
