@@ -3,13 +3,13 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import PizzaItem from "../../components/PizzaItem";
 
-function PizzaList({ pizzas }) {
+function PizzaList({ pizzas, onPizzaView }) {
   if (pizzas.length) {
     return (
       <Row>
         {pizzas.map((pizza) => (
           <Col xs={6} sm={4} md={3} lg={2} key={pizza.id}>
-            <PizzaItem pizza={pizza} />
+            <PizzaItem pizza={pizza} onPizzaView={onPizzaView} />
           </Col>
         ))}
       </Row>

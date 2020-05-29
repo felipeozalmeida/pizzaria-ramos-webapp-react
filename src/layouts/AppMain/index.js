@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
+import Modal from "react-bootstrap/Modal";
 import PizzaToolbar from "../../components/PizzaToolbar";
 import PizzaList from "../../components/PizzaList";
 
 function AppMain() {
+  function handlePizzaView() {
+    return console.log("show modal fucker!");
+  }
+
   const [pizzas] = useState([
     {
       id: 1,
@@ -53,7 +58,7 @@ function AppMain() {
     <main>
       <Container>
         <PizzaToolbar />
-        <PizzaList pizzas={pizzas} />
+        <PizzaList pizzas={pizzas} onPizzaView={handlePizzaView} />
       </Container>
     </main>
   );
