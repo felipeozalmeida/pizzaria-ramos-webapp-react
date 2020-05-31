@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import PizzaToolbar from "../../components/PizzaToolbar";
 import PizzaList from "../../components/PizzaList";
 
-function AppMain() {
+const AppMain = () => {
   const handlePizzaView = () => setShowPizza(true);
   const handlePizzaClose = () => setShowPizza(false);
 
@@ -80,6 +80,6 @@ function AppMain() {
       </Container>
     </main>
   );
-}
+};
 
 export default AppMain;

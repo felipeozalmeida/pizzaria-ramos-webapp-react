@@ -3,7 +3,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import PizzaItem from "../../components/PizzaItem";
 
-function PizzaList({ pizzas, onPizzaView }) {
+const PizzaList = ({ pizzas, onPizzaView }) => {
   if (pizzas.length) {
     return (
       <Row>
@@ -17,6 +17,6 @@ function PizzaList({ pizzas, onPizzaView }) {
   }
 
   return <h1>That shit doesn't have any pizzas yet!</h1>;
-}
+};
 
 export default PizzaList;

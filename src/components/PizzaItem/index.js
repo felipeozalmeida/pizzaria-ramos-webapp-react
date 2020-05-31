@@ -2,7 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import PizzaItemToolbar from "../PizzaItemToolbar";
 
-function PizzaItem({ pizza, onPizzaView }) {
+const PizzaItem = ({ pizza, onPizzaView }) => {
   return (
     <Card className="text-light">
       <Card.Img src={pizza.imageFile} alt={pizza.imageAlt} />
@@ -13,6 +13,6 @@ function PizzaItem({ pizza, onPizzaView }) {
       </Card.ImgOverlay>
     </Card>
   );
-}
+};
 
 export default PizzaItem;

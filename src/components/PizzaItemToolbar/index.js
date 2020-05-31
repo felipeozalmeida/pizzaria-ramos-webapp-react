@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import { FaPen, FaTrash } from "react-icons/fa";
 import "./styles.scss";
 
-function PizzaItemToolbar({ onPizzaView }) {
+const PizzaItemToolbar = ({ onPizzaView }) => {
   return (
     <div className="PizzaItemToolbar">
       <Button
@@ -25,6 +25,6 @@ function PizzaItemToolbar({ onPizzaView }) {
       </Button>
     </div>
   );
-}
+};
 
 export default PizzaItemToolbar;

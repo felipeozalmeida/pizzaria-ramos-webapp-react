@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import "./styles.scss";
 
-function AppHeader() {
+const AppHeader = () => {
   return (
     <Jumbotron fluid className="AppHeader" as="header">
       <Container>
@@ -12,6 +12,6 @@ function AppHeader() {
       </Container>
     </Jumbotron>
   );
-}
+};
 
 export default AppHeader;
