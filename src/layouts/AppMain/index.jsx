@@ -6,10 +6,14 @@ import PizzaToolbar from "../../components/PizzaToolbar";
 import PizzaList from "../../components/PizzaList";
 
 const AppMain = () => {
-  const handlePizzaView = () => setShowPizza(true);
+  const handlePizzaView = (pizza) => {
+    setPizza(pizza);
+    setShowPizza(true);
+  };
   const handlePizzaClose = () => setShowPizza(false);
 
   const [showPizza, setShowPizza] = useState(false);
+  const [pizza, setPizza] = useState(null);
   const [pizzas] = useState([
     {
       id: 1,
@@ -55,7 +59,7 @@ const AppMain = () => {
     },
   ]);
 
-  // See issue for why modal animation is currently disabled
+  // TODO: Follow issue for why modal animation is currently disabled
   // https://github.com/react-bootstrap/react-bootstrap/issues/5075
 
   return (
@@ -63,20 +67,22 @@ const AppMain = () => {
       <Container>
         <PizzaToolbar />
         <PizzaList pizzas={pizzas} onPizzaView={handlePizzaView} />
-        <Modal show={showPizza} onHide={handlePizzaClose} animation={false}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handlePizzaClose}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={handlePizzaClose}>
-              Save Changes
-            </Button>
-          </Modal.Footer>
-        </Modal>
+        {pizza && (
+          <Modal show={showPizza} onHide={handlePizzaClose} animation={false}>
+            <Modal.Header closeButton>
+              <Modal.Title>{pizza.name}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Price: {pizza.price}</Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handlePizzaClose}>
+                Close
+              </Button>
+              <Button variant="primary" onClick={handlePizzaClose}>
+                Save Changes
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        )}
       </Container>
     </main>
   );

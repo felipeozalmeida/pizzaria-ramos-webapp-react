@@ -3,14 +3,14 @@ import Button from "react-bootstrap/Button";
 import { FaPen, FaTrash } from "react-icons/fa";
 import "./styles.scss";
 
-const PizzaItemToolbar = ({ onPizzaView }) => {
+const PizzaItemToolbar = (props) => {
   return (
     <div className="PizzaItemToolbar">
       <Button
         className="PizzaItemToolbar__button"
         variant="outline-light"
         size="sm"
-        onClick={onPizzaView}
+        onClick={() => props.onPizzaView(props.pizza)}
       >
         <FaPen />
         <span className="sr-only">Editar</span>
