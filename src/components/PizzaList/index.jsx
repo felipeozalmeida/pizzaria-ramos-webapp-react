@@ -6,9 +6,9 @@ import PizzaItem from "../../components/PizzaItem";
 const PizzaList = (props) => {
   if (props.pizzas.length) {
     return (
-      <Row>
+      <Row className="mb-n3">
         {props.pizzas.map((pizza) => (
-          <Col xs={6} sm={4} md={3} lg={2} key={pizza.id}>
+          <Col className="mb-3" xs={6} sm={4} md={3} lg={2} key={pizza.id}>
             <PizzaItem pizza={pizza} onPizzaView={props.onPizzaView} />
           </Col>
         ))}
