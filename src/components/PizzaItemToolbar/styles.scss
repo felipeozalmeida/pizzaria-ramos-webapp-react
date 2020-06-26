@@ -12,4 +12,13 @@
     margin-left: 0.125rem;
     margin-right: 0.125rem;
   }
+
+  @media (min-width: map-get($grid-breakpoints, "lg")) {
+    opacity: 0;
+    transition: $transition-fade;
+
+    .PizzaItemImgOverlay:hover & {
+      opacity: 1;
+    }
+  }
 }
