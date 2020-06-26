@@ -1,3 +1,9 @@
 .PizzaItemOverlay {
   background-color: rgba(0, 0, 0, 0.375);
 }
+
+.PizzaItemTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
